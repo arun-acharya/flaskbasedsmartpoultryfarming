@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+   <head>
+      <title>GPIO Control</title>
+      <link rel="stylesheet" href='../static/style.css'/>
+   </head>
+   <body><table align='center'><tr><td>
+		<h1>Actuators</h1>
+		<h2> Status </h2>
+		<h3> Fan Status ==>
+			{%if fan == 0: %}OFF{%endif%}{{a}}
+			{%if fan == 1: %}ON{%endif%}{{a}} </h3>
+		<h3> Light Status ==> 
+			 {%if led == 0: %}OFF{%endif%}{{a}}
+			 {%if led == 1: %}ON{%endif%}{{a}}</h3>
+		<h3> Temprature ==> {{temp}} C </h3>
+		<h3> Humidity ==> {{humi}} %</h3>
+		<br>
+		<h2> Commands </h2>
+		<h3> Temprature and Humidity ==> 
+			<a href="/dht/check" class="button">CHECK</a>
+		</h3>
+		<h3> 
+			Fan Control ==> 
+			<a href="/fan/on" class="button">TURN ON</a>  
+			<a href="/fan/off"class="button">TURN OFF</a>
+		</h3>
+		<h3> 
+			LED Control ==> 
+			<a href="/led/on" class="button">TURN ON</a>  
+			<a href="/led/off"class="button">TURN OFF</a>
+		</h3>
+		
+   </body>
+</html>
