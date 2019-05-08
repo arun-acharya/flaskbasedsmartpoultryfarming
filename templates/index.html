@@ -8,23 +8,23 @@
 		<h2> Status </h2>
 		<h3> Fan Status ==>
 			{%if fan == 0: %}OFF{%endif%}
-			{%if fan == 1: %}ON{%endif%}</h3>
+			{%if fan == 1: %}ON{%endif%}</h3> <!-- shows OFF if the fan status is 0, and ON if fan status is 1 -->
 		<h3> Light Status ==> 
 			 {%if led == 0: %}OFF{%endif%}
-			 {%if led == 1: %}ON{%endif%}</h3>
+			 {%if led == 1: %}ON{%endif%}</h3> <!-- shows OFF if the led status is 0, and ON if led status is 1 -->
 		<h3> Temprature ==> {{temp}} C </h3>
 		<h3> Humidity ==> {{humi}} %</h3>
 		<h3> MQ 135 Smoke Level  ==> 
 			{%if mq135 >= 0.320: %}HIGH{%endif%}
-			{%if mq135 <= 0.319: %}LOW{%endif%}</h3>
+			{%if mq135 <= 0.319: %}LOW{%endif%}</h3> <!-- shows LOW if the smoke level is below 320, and HIGH if the smoke level is avobe 319 -->
 		<br>
 		<h3> MQ 2 Gas Level  ==> 
 			{%if mq2 >= 0.320: %}HIGH{%endif%}
-			{%if mq2 <= 0.319: %}LOW{%endif%}</h3>
+			{%if mq2 <= 0.319: %}LOW{%endif%}</h3> <!-- shows LOW if the gas level is below 320, and HIGH if the gas level is avobe 319 -->
 		<br>
 		<h2> Commands </h2>
 		<h3> Temprature and Humidity ==> 
-			<a href="/dht/check" class="button">CHECK</a>
+			<a href="/dht/check" class="button">CHECK</a> <<!-- passes the hyperlink to flask -->
 		</h3>
 		<h3> 
 			Fan Control ==> 
